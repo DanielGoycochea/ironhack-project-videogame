@@ -22,7 +22,7 @@ function Board() {
    this.width = 50; 
    this.height = 50; 
    this.img = new Image()
-   this.img.src = 'https://t2.rbxcdn.com/5a8c15ef2d42af9eb1b8da8a58268e3d'
+   this.img.src = 'Images/PixelArt1.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
@@ -52,7 +52,7 @@ function Vampiros( y, type){
   this.width = 50
   this.height = 50
   this.img = new Image()
-    this.img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK-9TmsMZIqCHIy-UsQW8ubqrNyTkW1ynnAQDmjfe831ONlvdn8g' 
+    this.img.src = 'Images/kisspng-vampire-bat-drawing-deviantart-vampires-5ab61373459240.101752611521881971285.png' 
   
   this.draw = function(){
     this.x--;
@@ -61,5 +61,15 @@ function Vampiros( y, type){
     }
     
   }
+}
+
+
+function Disparos(){
+  this.x = player.x;
+  this.y =  player.y;
+  this.width = 20;
+  this.height = 20;
+  this.img = new Image()
+  
 }
 
