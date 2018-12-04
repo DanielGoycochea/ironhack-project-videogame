@@ -7,7 +7,10 @@ window.onload = function () {
     board.draw()
     player.draw()
     drawVampiros()
-    
+    drawBalas();
+    drawBalasIzq()
+    drawBalasUp()
+    drawBalasDown()
 
   }
 
