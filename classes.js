@@ -4,7 +4,7 @@ function Board() {
   this.width = canvas.width
   this.height = canvas.height
   this.img = new Image()
-  this.img.src = 'Images/PixelArt.png'
+  this.img.src = 'Images/fondo azul.png'
 
   this.img.onload = function(){
     this.draw()
@@ -19,10 +19,10 @@ function Board() {
  function Player(){
    this.x = 150;
    this.y = 150;
-   this.width = 50; 
-   this.height = 50; 
+   this.width = 80; 
+   this.height = 80; 
    this.img = new Image()
-   this.img.src = 'Images/PixelArt1.png'
+   this.img.src = 'Images/stop motion der/1 der.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
@@ -48,28 +48,35 @@ function Board() {
     
      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
    }
-
+  /* this.isTouching = function (vampiros) {
+    return (this.x < vampiros.x + vampiros.width)  &&
+           (this.x + this.width > vampiros.x)  &&
+           (this.y < vampiros.y + vampiros.height) &&
+           (this.y + this.height > vampiros.y)
+  }*/
  }
 
 function Vampiros( y, type){
   this.x = canvas.width
   this.y = y
-  this.width = 50
-  this.height = 50
+  this.width = 80
+  this.height = 80
   this.img = new Image()
-  this.img.src = 'Images/kisspng-vampire-bat-drawing-deviantart-vampires-5ab61373459240.101752611521881971285.png' 
+  this.img.src = 'Images/vampiro.png' 
   
   this.draw = function(){
-    this.x--;
+  this.x--;
     if(type){
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
     
   }
+
 }
 
 
 function Bala(){
+  this.active = true;
   this.x = player.x + 40;
   this.y =  player.y+ 15;
   this.width = 20;
@@ -80,6 +87,12 @@ function Bala(){
       this.x+=5;
       ctx.drawImage(this.bala,this.x, this.y, this.width, this.height)
   }
+ /* this.isTouching = function (vampiros) {
+    return (this.x < vampiros.x + vampiros.width)  &&
+           (this.x + this.width > vampiros.x)  &&
+           (this.y < vampiros.y + vampiros.height) &&
+           (this.y + this.height > vampiros.y)
+  }*/
   
 }
 

@@ -15,6 +15,8 @@ function drawVampiros() {
   })
 }
 
+
+
 function generateBalas(){
   let bala = new Bala()
   balas.push(bala);
@@ -60,6 +62,36 @@ function generateBalasUp(){
     balas.forEach(function(balaDown){
     balaDown.draw();
     })
-    
-    }
-    
+     }
+
+     function isTouching (a,b){
+       return a.x < b.x + b.width &&
+              a.x + a.width > b.x &&
+              a.y < b.y + b.height &&
+              a.y + a.height > b.y;
+
+     }
+
+     function checkColition(){
+       balas.forEach(function(bala){
+         obstacles.forEach(function (vampiro){
+          if (isTouching(bala, vampiro)){
+            console.log('muere vampiro')
+           /* balas.splice (index,1);
+            obstacles.splice(index,1);*/
+
+          } });
+       });
+
+       obstacles.forEach(function(vampiro){
+         if (isTouching(vampiro,player)){
+          console.log ("me toco el vampiro")
+
+
+         }
+       })
+     }
+
+  
+   /* function checkColitionbalas(obstacle){
+     if (balas.isTouching(obstacle)) console.log("ahi vas")}*/
