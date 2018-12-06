@@ -3,11 +3,13 @@ window.onload = function () {
     frames++
     
     generateVampiros()
+    generateLobos()
     ctx.clearRect(0,0, canvas.width, canvas.height)
     board.draw()
     player.draw()
     //gameOver()
     drawVampiros()
+    drawLobos();
     drawBalas();
     drawBalasIzq()
     drawBalasUp()

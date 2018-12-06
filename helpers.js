@@ -7,11 +7,24 @@ function generateVampiros() {
   obstacles.push(vampiro)
  
 }
-
-
 function drawVampiros() {
   obstacles.forEach(function(obstacle) {
     obstacle.draw()
+  })
+}
+
+function generateLobos() {
+  if(!(frames % 100 === 0)) return
+  
+  let randomHeight = Math.floor(Math.random() * 650) 
+  let lobos = new Lobos( randomHeight, canvas.height)
+  
+  obstacles.push(lobos)
+ 
+}
+function drawLobos() {
+  obstacles.forEach(function(obstacles) {
+    obstacles.draw()
   })
 }
 
@@ -83,15 +96,27 @@ function generateBalasUp(){
           } });
        });
 
+       balas.forEach(function(bala){
+        obstacles.forEach(function (lobo){
+         if (isTouching(bala, lobo)){
+           console.log('muere lobo')
+          /* balas.splice (index,1);
+           obstacles.splice(index,1);*/
+
+         } });
+      });
+
        obstacles.forEach(function(vampiro){
          if (isTouching(vampiro,player)){
           console.log ("me toco el vampiro")
-
-
          }
        })
-     }
+    
 
-  
+     obstacles.forEach(function(lobo){
+      if (isTouching(lobo,player)){
+       console.log ("me toco el Lobo")  }
+      })
+      } 
    /* function checkColitionbalas(obstacle){
      if (balas.isTouching(obstacle)) console.log("ahi vas")}*/

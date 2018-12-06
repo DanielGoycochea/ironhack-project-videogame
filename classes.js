@@ -57,12 +57,30 @@ function Board() {
  }
 
 function Vampiros( y, type){
-  this.x = canvas.width
+  this.x = 0
   this.y = y
   this.width = 80
   this.height = 80
   this.img = new Image()
   this.img.src = 'Images/vampiro.png' 
+  
+  this.draw = function(){
+  this.x++;
+    if(type){
+      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+    }
+    
+  }
+
+}
+
+function Lobos( y, type){
+  this.x = canvas.width
+  this.y = y
+  this.width = 80
+  this.height = 80
+  this.img = new Image()
+  this.img.src = 'images/hombre lobo2.png' 
   
   this.draw = function(){
   this.x--;
@@ -73,7 +91,6 @@ function Vampiros( y, type){
   }
 
 }
-
 
 function Bala(){
   this.active = true;
