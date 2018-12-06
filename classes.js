@@ -22,7 +22,7 @@ function Board() {
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
-   this.img.src = 'Images/stop motion der/1 der.png'
+   this.img.src = 'Images/1 der.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
