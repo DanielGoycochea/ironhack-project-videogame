@@ -1,5 +1,5 @@
 function generateVampiros() {
-  if(!(frames % 100 === 0)) return
+  if(!(frames % 300 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
@@ -14,17 +14,17 @@ function drawVampiros() {
 }
 
 function generateLobos() {
-  if(!(frames % 100 === 0)) return
+  if(!(frames % 300 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
   
-  obstacles.push(lobos)
+  obstaclesLobos.push(lobos)
  
 }
 function drawLobos() {
-  obstacles.forEach(function(obstacles) {
-    obstacles.draw()
+  obstaclesLobos.forEach(function(obstaclesLobos) {
+    obstaclesLobos.draw()
   })
 }
 
@@ -90,33 +90,35 @@ function generateBalasUp(){
          obstacles.forEach(function (vampiro){
           if (isTouching(bala, vampiro)){
             console.log('muere vampiro')
-           /* balas.splice (index,1);
-            obstacles.splice(index,1);*/
+           obstacles.splice(this.index)
+           balas.pop()
 
           } });
        });
 
-       balas.forEach(function(bala){
-        obstacles.forEach(function (lobo){
-         if (isTouching(bala, lobo)){
-           console.log('muere lobo')
-          /* balas.splice (index,1);
-           obstacles.splice(index,1);*/
-
-         } });
-      });
+     
 
        obstacles.forEach(function(vampiro){
          if (isTouching(vampiro,player)){
           console.log ("me toco el vampiro")
          }
        })
-    
 
-     obstacles.forEach(function(lobo){
-      if (isTouching(lobo,player)){
-       console.log ("me toco el Lobo")  }
-      })
-      } 
-   /* function checkColitionbalas(obstacle){
-     if (balas.isTouching(obstacle)) console.log("ahi vas")}*/
+       balas.forEach(function(bala){
+        obstaclesLobos.forEach(function (lobo){
+         if (isTouching(bala, lobo)){
+           console.log('muere lobo')
+            obstaclesLobos.splice(this.index,1)
+            balas.pop()
+
+         } });
+      });
+        obstaclesLobos.forEach(function(lobo){
+         if (isTouching(lobo,player)){
+       console.log ("me toco el Lobo")  
+        }
+    }) 
+     }
+       
+      
+     

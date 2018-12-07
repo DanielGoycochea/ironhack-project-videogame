@@ -6,5 +6,6 @@ let canvas = document.querySelector('#mycanvas')
   let player = new Player();
   let interval, frames = 0;
   let obstacles = [];
+  let obstaclesLobos = [];
   let balas= [];
  

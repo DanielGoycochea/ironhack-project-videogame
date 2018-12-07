@@ -40,7 +40,7 @@ function Board() {
     this.x -=  25
   }
   this.moveRight = function(){
-    if(this.x < 950)
+    if(this.x < 1120)
    this.x +=  25
  }
 
@@ -80,7 +80,26 @@ function Lobos( y, type){
   this.width = 80
   this.height = 80
   this.img = new Image()
-  this.img.src = 'images/hombre lobo2.png' 
+  this.img.src = 'Images/hombre_lobo2.png ' 
+  
+  this.draw = function(){
+  this.x--;
+    if(type){
+      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+    }
+    
+  }
+
+}
+
+
+function Murcielago( y, type){
+  this.x = canvas.width
+  this.y = y
+  this.width = 80
+  this.height = 80
+  this.img = new Image()
+  this.img.src = 'Images' 
   
   this.draw = function(){
   this.x--;
@@ -99,7 +118,7 @@ function Bala(){
   this.width = 20;
   this.height = 20;
   this.bala = new Image()
-  this.bala.src ="images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.bala.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.x+=5;
       ctx.drawImage(this.bala,this.x, this.y, this.width, this.height)
@@ -119,7 +138,7 @@ function BalaIzq(){
   this.width = 20;
   this.height = 20;
   this.balaIzq = new Image()
-  this.balaIzq.src ="images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.balaIzq.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.x-=5;
       ctx.drawImage(this.balaIzq,this.x, this.y, this.width, this.height)
@@ -133,7 +152,7 @@ function BalaUp(){
   this.width = 20;
   this.height = 20;
   this.balaUp = new Image()
-  this.balaUp.src ="images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.balaUp.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.y-=5;
       ctx.drawImage(this.balaUp,this.x, this.y, this.width, this.height)
@@ -147,7 +166,7 @@ function BalaDown(){
   this.width = 20;
   this.height = 20;
   this.balaDown = new Image()
-  this.balaDown.src ="images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.balaDown.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.y+=5;
       ctx.drawImage(this.balaDown,this.x, this.y, this.width, this.height)
