@@ -4,7 +4,7 @@ function Board() {
   this.width = canvas.width
   this.height = canvas.height
   this.img = new Image()
-  this.img.src = 'Images/fondo azul.png'
+  this.img.src = 'Images/fondo_azul.png'
 
   this.img.onload = function(){
     this.draw()
@@ -22,7 +22,7 @@ function Board() {
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
-   this.img.src = 'Images/1 der.png'
+   this.img.src = 'Images/1_der.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
@@ -93,23 +93,6 @@ function Lobos( y, type){
 }
 
 
-function Murcielago( y, type){
-  this.x = canvas.width
-  this.y = y
-  this.width = 80
-  this.height = 80
-  this.img = new Image()
-  this.img.src = 'Images' 
-  
-  this.draw = function(){
-  this.x--;
-    if(type){
-      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-    }
-    
-  }
-
-}
 
 function Bala(){
   this.active = true;

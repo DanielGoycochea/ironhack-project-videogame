@@ -1,5 +1,5 @@
 function generateVampiros() {
-  if(!(frames % 300 === 0)) return
+  if(!(frames % 100 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
@@ -14,7 +14,7 @@ function drawVampiros() {
 }
 
 function generateLobos() {
-  if(!(frames % 300 === 0)) return
+  if(!(frames % 100 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
@@ -86,12 +86,12 @@ function generateBalasUp(){
      }
 
      function checkColition(){
-       balas.forEach(function(bala){
-         obstacles.forEach(function (vampiro){
+       balas.forEach(function(bala,bI){
+         obstacles.forEach(function (vampiro,vI){
           if (isTouching(bala, vampiro)){
             console.log('muere vampiro')
-           obstacles.splice(this.index)
-           balas.pop()
+           obstacles.splice(vI,1)
+           balas.splice(bI,1)
 
           } });
        });
@@ -104,12 +104,12 @@ function generateBalasUp(){
          }
        })
 
-       balas.forEach(function(bala){
-        obstaclesLobos.forEach(function (lobo){
+       balas.forEach(function(bala,bI){
+        obstaclesLobos.forEach(function (lobo,lI){
          if (isTouching(bala, lobo)){
            console.log('muere lobo')
-            obstaclesLobos.splice(this.index,1)
-            balas.pop()
+            obstaclesLobos.splice(lI,1)
+            balas.splice(bI,1)
 
          } });
       });
