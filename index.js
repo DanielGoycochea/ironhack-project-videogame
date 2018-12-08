@@ -7,7 +7,7 @@ window.onload = function () {
     ctx.clearRect(0,0, canvas.width, canvas.height)
     board.draw()
     player.draw()
-    
+    //gameOver()
     drawVampiros()
     drawLobos();
     drawBalas();
@@ -15,12 +15,8 @@ window.onload = function () {
     drawBalasUp()
     drawBalasDown()
     checkColition()
-<<<<<<< HEAD
-    //gameOver()
-=======
     drawScore()
     drawlive()
->>>>>>> develop
   }
 
   function startGame(){

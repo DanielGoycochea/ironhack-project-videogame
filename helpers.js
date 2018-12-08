@@ -125,10 +125,6 @@ function generateBalasUp(){
     }) 
      }
        
-<<<<<<< HEAD
-      
-       
-=======
   function drawScore(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
@@ -139,6 +135,13 @@ function generateBalasUp(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
     ctx.fillText ("VIDAS: "+life,10,50);
-  }
+    
+    /*if(lifes <= 0){      
+      clearInterval(interval)
+      interval = 0
+      ctx.font = "bold 20px sans-serif";
+      ctx.fillStyle = "white";
+      ctx.fillText("se ha acabado!", 160, 160);
+  }*/
      
->>>>>>> develop
+  }
