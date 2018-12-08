@@ -15,7 +15,8 @@ window.onload = function () {
     drawBalasUp()
     drawBalasDown()
     checkColition()
-    
+    drawScore()
+    drawlive()
   }
 
   function startGame(){

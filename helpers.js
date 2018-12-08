@@ -1,7 +1,7 @@
 function generateVampiros() {
   if(!(frames % 100 === 0)) return
   
-  let randomHeight = Math.floor(Math.random() * 650) 
+  let randomHeight = Math.floor(Math.random() * 750) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
   
   obstacles.push(vampiro)
@@ -92,15 +92,17 @@ function generateBalasUp(){
             console.log('muere vampiro')
            obstacles.splice(vI,1)
            balas.splice(bI,1)
-
+            score++
           } });
        });
 
      
 
-       obstacles.forEach(function(vampiro){
+       obstacles.forEach(function(vampiro,vI){
          if (isTouching(vampiro,player)){
+          obstacles.splice(vI,1)
           console.log ("me toco el vampiro")
+          life--
          }
        })
 
@@ -110,15 +112,28 @@ function generateBalasUp(){
            console.log('muere lobo')
             obstaclesLobos.splice(lI,1)
             balas.splice(bI,1)
+            score++
 
          } });
       });
-        obstaclesLobos.forEach(function(lobo){
+        obstaclesLobos.forEach(function(lobo,lI){
          if (isTouching(lobo,player)){
-       console.log ("me toco el Lobo")  
+       console.log ("me toco el Lobo") 
+          obstaclesLobos.splice(lI,1)
+          life--; 
         }
     }) 
      }
        
-      
+  function drawScore(){
+    ctx.font = "36px Orbitron";
+    ctx.fillStyle = "white";
+    ctx.fillText ("MUERTOS: "+score,900,50);
+  }
+
+  function drawlive(){
+    ctx.font = "36px Orbitron";
+    ctx.fillStyle = "white";
+    ctx.fillText ("VIDAS: "+life,10,50);
+  }
      

@@ -31,7 +31,7 @@ function Board() {
     this.y -=  25
    }
    this.moveDown = function(){
-    if(this.y < 650)
+    if(this.y < 720)
     this.y +=  25
      }
   this.moveLeft = function(){
