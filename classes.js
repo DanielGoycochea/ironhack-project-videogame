@@ -48,12 +48,7 @@ function Board() {
     
      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
    }
-  /* this.isTouching = function (vampiros) {
-    return (this.x < vampiros.x + vampiros.width)  &&
-           (this.x + this.width > vampiros.x)  &&
-           (this.y < vampiros.y + vampiros.height) &&
-           (this.y + this.height > vampiros.y)
-  }*/
+
  }
 
 function Vampiros( y, type){
@@ -106,12 +101,6 @@ function Bala(){
       this.x+=5;
       ctx.drawImage(this.bala,this.x, this.y, this.width, this.height)
   }
- /* this.isTouching = function (vampiros) {
-    return (this.x < vampiros.x + vampiros.width)  &&
-           (this.x + this.width > vampiros.x)  &&
-           (this.y < vampiros.y + vampiros.height) &&
-           (this.y + this.height > vampiros.y)
-  }*/
   
 }
 
