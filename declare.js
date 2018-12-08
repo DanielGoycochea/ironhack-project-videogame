@@ -8,4 +8,7 @@ let canvas = document.querySelector('#mycanvas')
   let obstacles = [];
   let obstaclesLobos = [];
   let balas= [];
+  let score = 0;
+  let life = 3;
+  
  
