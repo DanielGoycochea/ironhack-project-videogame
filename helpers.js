@@ -1,7 +1,7 @@
 function generateVampiros() {
   if(!(frames % 100 === 0)) return
   
-  let randomHeight = Math.floor(Math.random() * 750) 
+  let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
   
   obstacles.push(vampiro)
@@ -110,8 +110,8 @@ function generateBalasUp(){
         obstaclesLobos.forEach(function (lobo,lI){
          if (isTouching(bala, lobo)){
            console.log('muere lobo')
-            obstaclesLobos.splice(lI,1)
             balas.splice(bI,1)
+            obstaclesLobos.splice(lI,1)
             score++
 
          } });
@@ -128,7 +128,7 @@ function generateBalasUp(){
   function drawScore(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
-    ctx.fillText ("MUERTOS: "+score,900,50);
+    ctx.fillText ("MUERTOS: "+score,710,50);
   }
 
   function drawlive(){
@@ -136,4 +136,27 @@ function generateBalasUp(){
     ctx.fillStyle = "white";
     ctx.fillText ("VIDAS: "+life,10,50);
   }
+   
+  
+  function gameOver(){
+  
+  if (life <= 1){
+      clearInterval(interval)
+      ctx.font = "bold 40px Orbitron";
+	  	ctx.fillStyle = "white";
+		  ctx.fillText("GAME OVER!", canvas.height/2, 300);
+    }
+  }
+
+  function win(){
+  
+    if (score >= 5){
+        clearInterval(interval)
+        ctx.font = "bold 60px Orbitron";
+        ctx.fillStyle = "white";
+        ctx.fillText("GANASTE!", canvas.height/2, 300);
+      }
+    }
+
+  
      
