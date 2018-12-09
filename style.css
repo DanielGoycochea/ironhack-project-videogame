@@ -2,7 +2,7 @@
 body{
   padding: 0;
   margin: 0;
-  background-image: url("images/fondo_largo.jpg");
+  background-image: url("images/fondo_ok1.jpg");
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -25,7 +25,7 @@ h1{
 }
 .botones{
     
-    text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
     margin-left: 100px;
     margin-top:  200px;
     width: 200px;
@@ -40,6 +40,29 @@ h1{
     position: absolute;
 }
 .botones:hover{
+  color: #000000;
+  background-color: #ffffff;
+}
+.none{
+  display: none;
+}
+.botones2{
+    
+  font-family: 'Orbitron', sans-serif;
+    margin-left: 100px;
+    margin-top:  80px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 6px;
+    border: 2px solid #CD5C5C;
+    
+}
+.botones2:hover{
   color: #000000;
   background-color: #ffffff;
 }
