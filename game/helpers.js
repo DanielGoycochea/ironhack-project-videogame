@@ -14,7 +14,7 @@ function drawVampiros() {
 }
 
 function generateLobos() {
-  if(!(frames % 100 === 0)) return
+  if(!(frames % 200 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
@@ -140,7 +140,7 @@ function generateBalasUp(){
   
   function gameOver(){
   
-  if (life <= 1){
+  if (life <= 0){
       clearInterval(interval)
       ctx.font = "bold 40px Orbitron";
 	  	ctx.fillStyle = "white";
@@ -150,7 +150,7 @@ function generateBalasUp(){
 
   function win(){
   
-    if (score >= 5){
+    if (score >= 100){
         clearInterval(interval)
         ctx.font = "bold 60px Orbitron";
         ctx.fillStyle = "white";

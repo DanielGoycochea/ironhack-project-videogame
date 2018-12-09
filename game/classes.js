@@ -90,7 +90,6 @@ function Lobos( y, type){
 
 
 function Bala(){
-  this.active = true;
   this.x = player.x + 40;
   this.y =  player.y+ 15;
   this.width = 20;
