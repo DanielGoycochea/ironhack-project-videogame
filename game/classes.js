@@ -22,7 +22,7 @@ function Board() {
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
-   this.img.src = 'Images/1_der.png'
+   this.img.src = 'Images/santo.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
@@ -90,9 +90,8 @@ function Lobos( y, type){
 
 
 function Bala(){
-  this.active = true;
-  this.x = player.x + 40;
-  this.y =  player.y+ 15;
+  this.x = player.x + 50;
+  this.y =  player.y+ 40;
   this.width = 20;
   this.height = 20;
   this.bala = new Image()
@@ -105,8 +104,8 @@ function Bala(){
 }
 
 function BalaIzq(){
-  this.x = player.x + 40;
-  this.y =  player.y+ 15;
+  this.x = player.x + 50;
+  this.y =  player.y+ 40;
   this.width = 20;
   this.height = 20;
   this.balaIzq = new Image()
@@ -119,8 +118,8 @@ function BalaIzq(){
 }
 
 function BalaUp(){
-  this.x = player.x + 40;
-  this.y =  player.y+ 15;
+  this.x = player.x + 50;
+  this.y =  player.y+ 40;
   this.width = 20;
   this.height = 20;
   this.balaUp = new Image()
@@ -133,8 +132,8 @@ function BalaUp(){
 }
 
 function BalaDown(){
-  this.x = player.x + 40;
-  this.y =  player.y+ 15;
+  this.x = player.x + 50;
+  this.y =  player.y+ 40;
   this.width = 20;
   this.height = 20;
   this.balaDown = new Image()

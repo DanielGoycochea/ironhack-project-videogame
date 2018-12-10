@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Projecto</title>
+  <title>SANTO VERSUS</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-</head>
-<body>
-  <canvas id= "mycanvas" width="1000" height="700">
-
-  </canvas>
- 
-  <script src="classes.js"></script>
-  <script src="helpers.js"></script>
-  <script src="declare.js"></script>
-  <script src="listeners.js"></script>
-  <script src="index.js"></script>
-  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="main.js"></script>
+</head>  
+<body></body>
+    
+        <h1>SANTO VERSUS</h1>
+        <h3 id ="nivel" class="none">ELIGE UN NIVEL:</h3>
+      
+        <div class="container">
+              <img src="images/traje.png" class = "santoTraje " id="santoTraje">
+              <button onclick="jugar()" class = "botones " id = "boton-inicio">JUGAR</button>
+              <button onclick="instrucciones()" class = "botones2 none " id = "boton-instrucciones">INSTRUCCIONES</button>
+              <img src="images/INSTRUCCIONES.png" alt="Instruccion" id = "instrucciones" class= "instrucciones none">
+              <button onclick="" class = "botones2 none " id = "boton-play">PUNTUACION</button>
+              <button onclick="unJugador()" class = "botones2 none" id = "boton-player1">UN JUGADOR</button>
+              <button onclick="" class = "botones2 none " id = "boton-player2">DOS JUGADORES</button>
+              <button onclick="creditos()" class = "botones2 none " id = "boton-credito">CREDITOS</button>
+              <button onclick="" class = "botones3 none" id = "boton-easy">FACIL</button>
+              <a href="game/game.html"><button onclick="" class = "botones3 none" id = "boton-medium">MEDIO</button></a>
+              <button onclick="" class = "botones3 none " id = "boton-HARD">DIFICIL</button>
+              <button onclick="regresar()" class = "botones3 none" id = "boton-regresar">REGRESAR</button>
+        </div>
+     
 </body>
 </html>
