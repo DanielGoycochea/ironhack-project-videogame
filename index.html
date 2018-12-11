@@ -9,25 +9,23 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="main.js"></script>
 </head>  
-<body></body>
-    
-        <h1>SANTO VERSUS</h1>
-        <h3 id ="nivel" class="none">ELIGE UN NIVEL:</h3>
-      
-        <div class="container">
+<body>
+     
+      <div class="container">
+          <div><h1>SANTO VERSUS</h1>
+          <h3 id ="nivel" class="none">ELIGE UN NIVEL:</h3></div>
               <img src="images/traje.png" class = "santoTraje " id="santoTraje">
-              <button onclick="jugar()" class = "botones " id = "boton-inicio">JUGAR</button>
-              <button onclick="instrucciones()" class = "botones2 none " id = "boton-instrucciones">INSTRUCCIONES</button>
               <img src="images/INSTRUCCIONES.png" alt="Instruccion" id = "instrucciones" class= "instrucciones none">
-              <button onclick="" class = "botones2 none " id = "boton-play">PUNTUACION</button>
-              <button onclick="unJugador()" class = "botones2 none" id = "boton-player1">UN JUGADOR</button>
-              <button onclick="" class = "botones2 none " id = "boton-player2">DOS JUGADORES</button>
-              <button onclick="creditos()" class = "botones2 none " id = "boton-credito">CREDITOS</button>
-              <button onclick="" class = "botones3 none" id = "boton-easy">FACIL</button>
-              <a href="game/game.html"><button onclick="" class = "botones3 none" id = "boton-medium">MEDIO</button></a>
-              <button onclick="" class = "botones3 none " id = "boton-HARD">DIFICIL</button>
-              <button onclick="regresar()" class = "botones3 none" id = "boton-regresar">REGRESAR</button>
-        </div>
+        <div> 
+             
+              <button onclick="unJugador()" class = "botones" id = "boton-player1">UN JUGADOR</button>
+              <button onclick="" class = "botones " id = "boton-player2">DOS JUGADORES</button>
+              <a href="game/game.html"><button onclick="" class = "botones none" id = "boton-jugar">JUGAR</button></a>
+              <button onclick="instrucciones()" class = "botones none" id = "boton-instrucciones">INSTRUCCIONES</button>
+              <button onclick="regresar()" class = "botones none" id = "boton-regresar">REGRESAR</button>
+              <button onclick="regresar2()" class = "botones none" id = "boton-regresar2">REGRESAR</button>
+        </div> 
+      </div>
      
 </body>
 </html>

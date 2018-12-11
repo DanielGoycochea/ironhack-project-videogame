@@ -3,22 +3,20 @@ function generateVampiros() {
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
-  
   obstacles.push(vampiro)
  
 }
 function drawVampiros() {
   obstacles.forEach(function(obstacle) {
-    obstacle.draw()
+  obstacle.draw()
   })
 }
 
 function generateLobos() {
-  if(!(frames % 200 === 0)) return
+  if(!(frames % 80 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
-  
   obstaclesLobos.push(lobos)
  
 }
@@ -78,10 +76,10 @@ function generateBalasUp(){
      }
 
      function isTouching (a,b){
-       return a.x < b.x + b.width &&
-              a.x + a.width > b.x &&
-              a.y < b.y + b.height &&
-              a.y + a.height > b.y;
+       return a.x < b.x + b.width-25 &&
+              a.x + a.width-25 > b.x &&
+              a.y < b.y + b.height-25 &&
+              a.y + a.height-25 > b.y;
 
      }
 
