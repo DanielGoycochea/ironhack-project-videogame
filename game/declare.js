@@ -10,6 +10,7 @@ let canvas = document.querySelector('#mycanvas')
   let balas= [];
   let score = 0;
   let life = 3;
+  
   //let lifeLobo = 2
   
   

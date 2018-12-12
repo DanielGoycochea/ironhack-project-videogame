@@ -64,7 +64,7 @@ function Vampiros( y, type){
     if(type){
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
-    
+    //if (this.x>canvas.height)    
   }
 
 }

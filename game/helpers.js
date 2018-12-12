@@ -1,24 +1,22 @@
 function generateVampiros() {
-  if(!(frames % 100 === 0)) return
+  if(!(frames % 80 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
-  
   obstacles.push(vampiro)
  
 }
 function drawVampiros() {
   obstacles.forEach(function(obstacle) {
-    obstacle.draw()
+  obstacle.draw()
   })
 }
 
 function generateLobos() {
-  if(!(frames % 200 === 0)) return
+  if(!(frames % 80 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
-  
   obstaclesLobos.push(lobos)
  
 }
@@ -27,8 +25,6 @@ function drawLobos() {
     obstaclesLobos.draw()
   })
 }
-
-
 
 function generateBalas(){
   let bala = new Bala()
@@ -78,10 +74,10 @@ function generateBalasUp(){
      }
 
      function isTouching (a,b){
-       return a.x < b.x + b.width &&
-              a.x + a.width > b.x &&
-              a.y < b.y + b.height &&
-              a.y + a.height > b.y;
+       return a.x < b.x + b.width-20 &&
+              a.x + a.width-20 > b.x &&
+              a.y < b.y + b.height-20 &&
+              a.y + a.height-20 > b.y;
 
      }
 
@@ -148,7 +144,7 @@ function generateBalasUp(){
     }
   }
 
-  function win(){
+  /*function win(){
   
     if (score >= 100){
         clearInterval(interval)
@@ -156,8 +152,15 @@ function generateBalasUp(){
         ctx.fillStyle = "white";
         ctx.fillText("GANASTE!", canvas.height/2, 300);
       }
-    }
+    }*/
 
-  
+  	$('#reintentar').click(function(){
+      life = 3;
+      score = 0;
+      obstacles.length = 0;
+      obstaclesLobos.length = 0;
+      if(clearInterval(interval))
+      interval = setInterval(update, 1000/60);
+      
+    });
      
-  

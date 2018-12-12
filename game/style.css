@@ -11,6 +11,31 @@ body {
   
     canvas {
       border: 1px solid red;
+      position: relative;
+      margin-top: -150px
          
     }
   
+    div{
+      text-align: left;
+      position: absulute;
+    }
+    .botones{
+    
+      font-family: 'Orbitron', sans-serif;
+        margin-left: 30px;
+        margin-top: 30px;
+        width: 200px;
+        text-align: center;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 6px;
+        border: 2px solid #CD5C5C;
+        position: relative;
+    }
+    .botones:hover{
+      color: #000000;
+      background-color: #ffffff;
