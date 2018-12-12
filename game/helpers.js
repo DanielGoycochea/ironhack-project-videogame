@@ -159,7 +159,7 @@ function generateBalasUp(){
       score = 0;
       obstacles.length = 0;
       obstaclesLobos.length = 0;
-      if(interval) clearInterval(interval);
+      if(clearInterval(interval))
       interval = setInterval(update, 1000/60);
       
     });
