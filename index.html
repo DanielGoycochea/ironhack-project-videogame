@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SANTO VERSUS</title>
+  <link rel="shortcut icon" href="">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="main.js"></script>
 </head> 
-<audio src="music/01 Intro - Quieto, No Se Resista.mp3" autoplay> </audio>
+<audio src="music/Intro.mp3" autoplay> </audio>
 <body>
-       
+      
       <div class="container">
           <div><h1>SANTO VERSUS</h1>
           <h3 id ="nivel" class="none">ELIGE UN NIVEL:</h3></div>
@@ -20,8 +21,9 @@
         <div> 
              
               <button onclick="unJugador()" class = "botones" id = "boton-player1">UN JUGADOR</button>
-              <button onclick="" class = "botones " id = "boton-player2">DOS JUGADORES</button>
-              <a href="game/game.html"><button onclick="" class = "botones none" id = "boton-jugar">JUGAR</button></a>
+              <button onclick="dosJugador()" class = "botones " id = "boton-player2">DOS JUGADORES</button>
+              <a href="game/unjugador/game.html"><button onclick="" class = "botones none" id = "boton-jugar">JUGAR</button></a>
+              <a href="game/2jugadores/game2.html"><button onclick="" class = "botones none" id = "boton-jugar2">JUGAR</button></a>
               <button onclick="instrucciones()" class = "botones none" id = "boton-instrucciones">INSTRUCCIONES</button>
               <button onclick="regresar()" class = "botones none" id = "boton-regresar">REGRESAR</button>
               <button onclick="regresar2()" class = "botones none" id = "boton-regresar2">REGRESAR</button>

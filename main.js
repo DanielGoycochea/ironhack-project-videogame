@@ -1,10 +1,10 @@
 $(document).ready(function(){
   console.log( "ready!" );
-})
+});
 
 
 function instrucciones(){
-  $("#boton-player1").addClass("none")
+ $("#boton-player1").addClass("none")
  $("#boton-player2").addClass("none")
  $("#boton-jugar").addClass("none")
  $(".santoTraje").addClass("none")
@@ -12,6 +12,7 @@ function instrucciones(){
  $("#boton-instrucciones").addClass("none");
  $("#boton-regresar2").removeClass("none")
  $(".instrucciones").removeClass("none")
+ $("#boton-jugar2").addClass("none")
 }
 function regresar(){
   $("#boton-instrucciones").addClass("none");
@@ -19,6 +20,7 @@ function regresar(){
   $("#boton-regresar").addClass("none")
   $("#boton-player1").removeClass("none")
   $("#boton-player2").removeClass("none")
+  $("#boton-jugar2").addClass("none")
  
 }
 function regresar2(){
@@ -37,3 +39,11 @@ function unJugador(){
  $("#boton-player1").addClass("none")
  $("#boton-player2").addClass("none")
 }
+function dosJugador(){
+  $("#boton-instrucciones").removeClass("none");
+  $("#boton-jugar2").removeClass("none")
+  $("#boton-regresar").removeClass("none")
+  $("#boton-player1").addClass("none")
+  $("#boton-player2").addClass("none")
+ }
+
