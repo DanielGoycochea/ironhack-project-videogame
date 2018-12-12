@@ -140,7 +140,7 @@ function generateBalasUp(){
       clearInterval(interval)
       ctx.font = "bold 40px Orbitron";
 	  	ctx.fillStyle = "white";
-		  ctx.fillText("GAME OVER!", canvas.height/2, 300);
+		  ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
     }
   }
 
