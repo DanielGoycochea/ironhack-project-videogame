@@ -135,15 +135,42 @@ function generateBalasUp(){
    
   
   function gameOver(){
-  
+    let puntajes=[];
+    
   if (life <= 0){
       clearInterval(interval)
       ctx.font = "bold 40px Orbitron";
 	  	ctx.fillStyle = "white";
-		  ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
+      ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
+      puntajes.push(score)
+      console.log(puntajes)
+      
+      localStorage.setItem("score",JSON.stringify(puntajes));
+    
+      if( localStorage.getItem('score') != null ){
+          var allScores=JSON.parse(localStorage.getItem('score'));
+          for (var i=0;i<allScores.length;i++) {
+            console.log(allScores[i]); 
+        
+        var newDiv = document.createElement("li");
+        var newContent = document.createTextNode(allScores[i]);
+        newDiv.appendChild(newContent);
+        my_div = document.getElementById("score-list");
+        my_div.appendChild(newDiv)
+            
+       }
+      
+      }else{
+        console.log('Nel');
+        var allScores = [];
+      }
+
+
     }
+    
   }
 
+  
   /*function win(){
   
     if (score >= 100){
@@ -154,13 +181,26 @@ function generateBalasUp(){
       }
     }*/
 
-  	$('#reintentar').click(function(){
+    function reset (){
       life = 3;
       score = 0;
       obstacles.length = 0;
       obstaclesLobos.length = 0;
-      if(clearInterval(interval))
-      interval = setInterval(update, 1000/60);
+    //   if (interval) clearInterval(interval)
+    //  interval = setInterval(update, 1000/60);
       
-    });
+    }
+
+  //  $('#reintentar').click(function(){
+  //     life = 3;
+  //    score = 0;
+  //    obstacles.length = 0;
+  //    obstaclesLobos.length = 0;
+  //    if (interval) clearInterval(interval)
+  //    interval = setInterval(update, 1000/60);
+      
+  //  });
+
+/*Variable globales*/
+
      

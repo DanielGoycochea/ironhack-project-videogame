@@ -17,6 +17,7 @@ window.onload = function () {
     drawScore()
     drawlive()
     gameOver()
+    // score()
     /*win()*/
   }
 
