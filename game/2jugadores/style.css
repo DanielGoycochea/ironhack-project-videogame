@@ -33,7 +33,7 @@ body {
     .botones{
       font-family: 'Orbitron', sans-serif;
       margin-left: -30px;
-      margin-top: 0px;
+      margin-top: 200px;
       width: 200px;
       text-align: center;
       padding: 10px;
@@ -50,5 +50,5 @@ body {
       background-color: #ffffff;
     }
     #regresar{
-      margin-top: 80px;
+      margin-top: 280px;
     }

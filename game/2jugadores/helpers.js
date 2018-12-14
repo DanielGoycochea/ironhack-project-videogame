@@ -118,13 +118,13 @@ function isTouching (a,b){
   function drawScore(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
-    ctx.fillText ("MUERTOS: "+score,920,50);
+    ctx.fillText ("MUERTOS: "+score,860,50);
   }
 
   function drawlive(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
-    ctx.fillText ("VIDAS: "+life,10,50);
+    ctx.fillText ("VIDAS: "+life,50,50);
   }
    
   

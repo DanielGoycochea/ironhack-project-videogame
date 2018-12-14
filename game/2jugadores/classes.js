@@ -4,7 +4,7 @@ function Board() {
   this.width = canvas.width
   this.height = canvas.height
   this.img = new Image()
-  this.img.src = 'Images/fondo_azul.png'
+  this.img.src = '../../Images/fondo_azul.png'
 
   this.img.onload = function(){
     this.draw()
@@ -22,7 +22,7 @@ function Board() {
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
-   this.img.src = 'Images/santo.png'
+   this.img.src = '../../Images/santo.png'
    this.img.onload = function(){
      this.draw()
    }.bind(this)
@@ -31,7 +31,7 @@ function Board() {
     this.y -=  25
    }
    this.moveDown = function(){
-    if(this.y < 720)
+    if(this.y < 620)
     this.y +=  25
      }
   this.moveLeft = function(){
@@ -57,7 +57,7 @@ function Board() {
   this.width = 80; 
   this.height = 80; 
   this.img = new Image()
-  this.img.src = 'Images/blueizq .png'
+  this.img.src = '../../Images/blueizq .png'
   this.img.onload = function(){
     this.draw()
   }.bind(this)
@@ -66,7 +66,7 @@ function Board() {
    this.y -=  25
   }
   this.moveDown = function(){
-   if(this.y < 720)
+   if(this.y < 620)
    this.y +=  25
     }
  this.moveLeft = function(){
@@ -92,9 +92,9 @@ function Vampiros( y, type){
   this.width = 80
   this.height = 80
   this.img = new Image()
-  this.img.src = 'Images/vampiro.png'
+  this.img.src = '../../Images/vampiro.png'
   this.img2 = new Image();
-  this.img2.src = 'Images/vampiroalas.png' 
+  this.img2.src = '../../Images/vampiroalas.png' 
   this.anima = true;
   this.draw = function(){
   this.anima = !this.anima;
@@ -117,9 +117,9 @@ function Lobos( y, type){
   this.width = 80
   this.height = 80
   this.img = new Image()
-  this.img.src = 'Images/hombre_lobo2.png'
+  this.img.src = '../../Images/hombre_lobo2.png'
   this.img2 = new Image()
-  this.img2.src= 'Images/hombre1.png'
+  this.img2.src= '../../Images/hombre1.png'
   this.anima = true  
   this.draw = function(){
     this.anima = !this.anima;
@@ -144,7 +144,7 @@ function Bala(){
   this.width = 20;
   this.height = 20;
   this.bala = new Image()
-  this.bala.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.bala.src ="../../Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.x+=5;
       ctx.drawImage(this.bala,this.x, this.y, this.width, this.height)
@@ -158,7 +158,7 @@ function BalaIzq(){
   this.width = 20;
   this.height = 20;
   this.balaIzq = new Image()
-  this.balaIzq.src ="Images/Bill_Bala_New_Super_Mario_Bros..png";
+  this.balaIzq.src ="../../Images/Bill_Bala_New_Super_Mario_Bros..png";
   this.draw = function (){
       this.x-=5;
       ctx.drawImage(this.balaIzq,this.x, this.y, this.width, this.height)
