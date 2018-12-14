@@ -92,14 +92,21 @@ function Vampiros( y, type){
   this.width = 80
   this.height = 80
   this.img = new Image()
-  this.img.src = 'Images/vampiro.png' 
-  
+  this.img.src = 'Images/vampiro.png'
+  this.img2 = new Image();
+  this.img2.src = 'Images/vampiroalas.png' 
+  this.anima = true;
   this.draw = function(){
+  this.anima = !this.anima;
   this.x++;
     if(type){
+      if(this.anima){
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+      }else{
+        ctx.drawImage(this.img2, this.x, this.y,this.width, this.height)
+      }
     }
-    //if (this.x>canvas.height)    
+       
   }
 
 }
@@ -110,12 +117,19 @@ function Lobos( y, type){
   this.width = 80
   this.height = 80
   this.img = new Image()
-  this.img.src = 'Images/hombre_lobo2.png ' 
-  
+  this.img.src = 'Images/hombre_lobo2.png'
+  this.img2 = new Image()
+  this.img2.src= 'Images/hombre1.png'
+  this.anima = true  
   this.draw = function(){
-  this.x--;
+    this.anima = !this.anima;
+    this.x--;
     if(type){
+      if(this.anima /*&& !(frames %  === 0)*/){
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+      }else{
+        ctx.drawImage(this.img2, this.x, this.y, this.width, this.height )
+      }
     }
     
   }

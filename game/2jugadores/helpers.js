@@ -1,5 +1,5 @@
 function generateVampiros() {
-  if(!(frames % 80 === 0)) return
+  if(!(frames % 100 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
@@ -13,7 +13,7 @@ function drawVampiros() {
 }
 
 function generateLobos() {
-  if(!(frames % 80 === 0)) return
+  if(!(frames % 100 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
@@ -32,31 +32,27 @@ function generateBalas(){
 }
 
 function drawBalas(){
-balas.forEach(function(bala){
+  balas.forEach(function(bala){
   bala.draw();
 })
   
 }
 
 function generateBalasIzq(){
-let balaIzq = new BalaIzq()
-balas.push(balaIzq);
+  let balaIzq = new BalaIzq()
+  balas.push(balaIzq);
 }
 
 function drawBalasIzq(){
-balas.forEach(function(balaIzq){
-balaIzq.draw();
+  balas.forEach(function(balaIzq){
+  balaIzq.draw();
 })
 
 }
 
-
-
-
-
-     function isTouching (a,b){
-       return a.x < b.x + b.width-20 &&
-              a.x + a.width-20 > b.x &&
+function isTouching (a,b){
+  return a.x < b.x + b.width-20 &&
+  a.x + a.width-20 > b.x &&
               a.y < b.y + b.height-20 &&
               a.y + a.height-20 > b.y;
 
@@ -122,7 +118,7 @@ balaIzq.draw();
   function drawScore(){
     ctx.font = "36px Orbitron";
     ctx.fillStyle = "white";
-    ctx.fillText ("MUERTOS: "+score,910,50);
+    ctx.fillText ("MUERTOS: "+score,920,50);
   }
 
   function drawlive(){
