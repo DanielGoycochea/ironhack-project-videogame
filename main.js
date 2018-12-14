@@ -21,6 +21,11 @@ function regresar(){
   $("#boton-player1").removeClass("none")
   $("#boton-player2").removeClass("none")
   $("#boton-jugar2").addClass("none")
+  $(".sybTraje").addClass("none")
+    $(".santoTraje").removeClass("none")
+  $("#boton-jugar2").addClass("none")
+  
+  $("#boton-instruccionessyb").addClass("none");
  
 }
 function regresar2(){
@@ -40,10 +45,31 @@ function unJugador(){
  $("#boton-player2").addClass("none")
 }
 function dosJugador(){
-  $("#boton-instrucciones").removeClass("none");
+  $("#boton-instruccionessyb").removeClass("none");
   $("#boton-jugar2").removeClass("none")
   $("#boton-regresar").removeClass("none")
   $("#boton-player1").addClass("none")
   $("#boton-player2").addClass("none")
+  $(".sybTraje").removeClass("none")
+  $(".santoTraje").addClass("none")
+  
  }
-
+ function instruccionessyb(){
+  $(".sybTraje").addClass("none")
+  $("#boton-instruccionessyb").addClass("none");
+  $("#boton-jugar2").addClass("none");
+  $("#boton-regresar").addClass("none")
+  $("#instruccionessyb").removeClass("none")
+  $("#boton-regresar3").removeClass("none")
+  
+   
+  }
+  function regresar3(){
+    $("#instruccionessyb").addClass("none");
+    $("#boton-instruccionessyb").removeClass("none");
+    $("#boton-jugar2").removeClass("none");
+    $(".sybTraje").removeClass("none")
+    $("#boton-regresar3").addClass("none")
+    $("#boton-regresar").removeClass("none")
+  }
+  

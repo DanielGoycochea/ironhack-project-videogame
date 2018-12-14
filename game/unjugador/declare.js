@@ -4,12 +4,15 @@ let canvas = document.querySelector('#mycanvas')
  
   let board = new Board();
   let player = new Player();
-  let interval, frames = 0;
+  let interval; 
+  let frames = 0;
   let obstacles = [];
   let obstaclesLobos = [];
   let balas= [];
   let score = 0;
   let life = 3;
+  // let sound = new Sound();
+  
 
   
   

@@ -1,5 +1,5 @@
 function generateVampiros() {
-  if(!(frames % 80 === 0)) return
+  if(!(frames % 300 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let vampiro = new Vampiros( randomHeight, canvas.height)
@@ -13,7 +13,7 @@ function drawVampiros() {
 }
 
 function generateLobos() {
-  if(!(frames % 80 === 0)) return
+  if(!(frames % 200 === 0)) return
   
   let randomHeight = Math.floor(Math.random() * 650) 
   let lobos = new Lobos( randomHeight, canvas.height)
@@ -135,7 +135,7 @@ function generateBalasUp(){
    
   
   function gameOver(){
-    let puntajes=[];
+    var puntajes=[];
     
   if (life <= 0){
       clearInterval(interval)
@@ -144,11 +144,12 @@ function generateBalasUp(){
       ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
       puntajes.push(score)
       console.log(puntajes)
+      // $("#sound").addClass("none")
       
-      localStorage.setItem("score",JSON.stringify(puntajes));
+      localStorage.setItem("marcador",JSON.stringify(puntajes));
     
-      if( localStorage.getItem('score') != null ){
-          var allScores=JSON.parse(localStorage.getItem('score'));
+      if( localStorage.getItem('marcador') != null ){
+          var allScores=JSON.parse(localStorage.getItem('marcador'));
           for (var i=0;i<allScores.length;i++) {
             console.log(allScores[i]); 
         
@@ -160,9 +161,6 @@ function generateBalasUp(){
             
        }
       
-      }else{
-        console.log('Nel');
-        var allScores = [];
       }
 
 
