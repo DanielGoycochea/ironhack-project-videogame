@@ -17,8 +17,8 @@ function Board() {
 
 
  function Player(){
-   this.x = 150;
-   this.y = 150;
+   this.x = 250;
+   this.y = 300;
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
@@ -35,14 +35,14 @@ function Board() {
     this.y +=  25
      }
   this.moveLeft = function(){
-    this.img = new Image()
-    this.img.src = '../../Images/santo_izq.png'
+   /* this.img = new Image()
+    this.img.src = '../../Images/santo_izq.png'*/
     if(this.x > 0)
     this.x -=  25
   }
   this.moveRight = function(){
-    this.img = new Image()
-    this.img.src = '../../Images/santo.png'
+    /*this.img = new Image()
+    this.img.src = '../../Images/santo.png'*/
     if(this.x < 1120)
    this.x +=  25
  }
@@ -55,8 +55,8 @@ function Board() {
  }
 
  function Player2(){
-  this.x = 900;
-  this.y = 150;
+  this.x = 800;
+  this.y = 300;
   this.width = 80; 
   this.height = 80; 
   this.img = new Image()

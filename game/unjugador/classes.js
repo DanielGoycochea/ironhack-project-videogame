@@ -17,8 +17,8 @@ function Board() {
 
 
  function Player(){
-   this.x = 150;
-   this.y = 150;
+   this.x = 450;
+   this.y = 300;
    this.width = 80; 
    this.height = 80; 
    this.img = new Image()
