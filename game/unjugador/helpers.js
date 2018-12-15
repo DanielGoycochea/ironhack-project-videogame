@@ -145,6 +145,7 @@ function generateBalasUp(){
       ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
       puntajes.push(score)
       console.log(puntajes)
+      
       // $("#sound").addClass("none")
       
       /*localStorage.setItem("marcador",JSON.stringify(puntajes));
