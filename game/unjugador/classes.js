@@ -35,15 +35,17 @@ function Board() {
     this.y +=  25
      }
   this.moveLeft = function(){
-    
+    this.img = new Image()
+    this.img.src = '../../Images/santo_izq.png'
     if(this.x > 0)
     this.x -=  25
   }
   this.moveRight = function(){
+    this.img = new Image()
+    this.img.src = '../../Images/santo.png'
     if(this.x < 920)
-   this.x +=  25
+    this.x +=  25
  }
-
    this.draw = function () {
     
      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
@@ -90,7 +92,7 @@ function Lobos( y, type){
     this.anima = !this.anima;
     this.x--;
     if(type){
-      if(this.anima /*&& !(frames %  === 0)*/){
+      if(this.anima){
       ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
       }else{
         ctx.drawImage(this.img2, this.x, this.y, this.width, this.height )
@@ -159,18 +161,3 @@ function BalaDown(){
   
 }
 
-// function Sound() {
-//   this.sound = document.createElement("audio");
-//   this.sound = new sound 
-//   this.sound.src = "music/08 Capitán.mp3";
-//   this.sound.setAttribute("preload", "auto");
-//   this.sound.setAttribute("controls", "none");
-//   this.sound.style.display = "none";
-//   document.body.appendChild(this.sound);
-//   this.play = function(){
-//       this.sound.play();
-//   }
-//   this.stop = function(){
-//       this.sound.pause();
-//   }    
-// }

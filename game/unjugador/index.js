@@ -5,7 +5,7 @@ window.onload = function () {
     generateVampiros()
     generateLobos()
     ctx.clearRect(0,0, canvas.width, canvas.height)
-    // sound.play()
+    
     board.draw()
     player.draw()
     drawVampiros()
@@ -18,9 +18,8 @@ window.onload = function () {
     drawScore()
     drawlive()
     gameOver()
-    // sound.play()
-    // score()
-    /*win()*/
+   
+   
   }
 
   function startGame(){

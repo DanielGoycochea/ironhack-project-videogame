@@ -139,33 +139,13 @@ function generateBalasUp(){
     
   if (life <= 0){
       //clearInterval(interval)
-      clearTimeout(interval);
+      clearInterval(interval);
       ctx.font = "bold 40px Orbitron";
 	  	ctx.fillStyle = "white";
       ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
       puntajes.push(score)
       console.log(puntajes)
-      
-      // $("#sound").addClass("none")
-      
-      /*localStorage.setItem("marcador",JSON.stringify(puntajes));
-    
-      if( localStorage.getItem('marcador') != null ){
-          var allScores=JSON.parse(localStorage.getItem('marcador'));
-          for (var i=0;i<allScores.length;i++) {
-            console.log(allScores[i]); 
-        
-        var newDiv = document.createElement("li");
-        var newContent = document.createTextNode(allScores[i]);
-        newDiv.appendChild(newContent);
-        my_div = document.getElementById("score-list");
-        my_div.appendChild(newDiv)
-            
-       }
-      
-      }*/
-
-
+   
     }
     
   }

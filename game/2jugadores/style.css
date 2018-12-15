@@ -20,7 +20,7 @@ body {
       flex-direction: row;
     }
     canvas {
-      border: 1px solid red;
+      border: 2px solid #CD5C5C;
       position: row;
       margin-top: 0px;
       margin-left: 200px;
