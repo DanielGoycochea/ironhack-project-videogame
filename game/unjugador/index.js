@@ -10,6 +10,7 @@ window.onload = function () {
     player.draw()
     drawVampiros()
     drawLobos();
+    drawMomia();
     drawBalas();
     drawBalasIzq()
     drawBalasUp()

@@ -103,6 +103,26 @@ function Lobos( y, type){
 
 }
 
+function Momia( y, type){
+  this.x = canvas.width
+  this.y = y
+  this.width = 80
+  this.height = 80
+  this.img = new Image()
+  this.img.src = '../../Images/santo_izq.png'
+  
+  this.draw = function(){
+     this.x--;
+    if(type){
+      
+      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+         
+    }
+    
+  }
+
+}
+
 
 
 function Bala(){
