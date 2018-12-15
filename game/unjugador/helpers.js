@@ -138,7 +138,8 @@ function generateBalasUp(){
     var puntajes=[];
     
   if (life <= 0){
-      clearInterval(interval)
+      //clearInterval(interval)
+      clearTimeout(interval);
       ctx.font = "bold 40px Orbitron";
 	  	ctx.fillStyle = "white";
       ctx.fillText("GAME OVER!", canvas.height/2+20, 300);
@@ -179,26 +180,5 @@ function generateBalasUp(){
       }
     }*/
 
-    function reset (){
-      life = 3;
-      score = 0;
-      obstacles.length = 0;
-      obstaclesLobos.length = 0;
-    //   if (interval) clearInterval(interval)
-    //  interval = setInterval(update, 1000/60);
-      
-    }
-
-  //  $('#reintentar').click(function(){
-  //     life = 3;
-  //    score = 0;
-  //    obstacles.length = 0;
-  //    obstaclesLobos.length = 0;
-  //    if (interval) clearInterval(interval)
-  //    interval = setInterval(update, 1000/60);
-      
-  //  });
-
-/*Variable globales*/
 
      
