@@ -25,6 +25,19 @@ function drawLobos() {
     obstaclesLobos.draw()
   })
 }
+function generateMomia() {
+  if(!(frames % 10 === 0)) return
+  
+  let randomHeight = Math.floor(Math.random() * 650) 
+  let momia = new Momia( randomHeight, canvas.height)
+  obstaclesMomia.push(momia)
+ 
+}
+function drawMomia() {
+  obstaclesMomia.forEach(function(obstaclesMomia) {
+    obstaclesMomia.draw()
+  })
+}
 
 function generateBalas(){
   let bala = new Bala()
