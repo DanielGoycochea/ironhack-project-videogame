@@ -1,33 +1,32 @@
-
-addEventListener('keydown', function(e){
-   
-  if (e.keyCode===38){
-     player.moveUp()
-     
-
-   }else if (e.keyCode===40){
-    player. moveDown()
-   }
-
-    else if(e.keyCode===37){
-      player.moveLeft()
-    }
-    else if(e.keyCode===39){
-      player.moveRight()
-    }
-    else if(e.keyCode===68){
-      generateBalas();
-    }
-
-    else if(e.keyCode===65){
+addEventListener("keydown", function (e) {
+  switch (e.key) {
+    case "ArrowUp":
+      player.moveUp();
+      break;
+    case "ArrowDown":
+      player.moveDown();
+      break;
+    case "ArrowLeft":
+      player.moveLeft();
+      break;
+    case "ArrowRight":
+      player.moveRight();
+      break;
+    case "a":
       generateBalasIzq();
-    }
-
-    else if(e.keyCode===87){
+      player.moveLeft();
+      break;
+    case "w":
       generateBalasUp();
-    }
-    else if(e.keyCode===83){
+      break;
+    case "s":
       generateBalasDown();
-    }
-
-})
+      break;
+    case "d":
+      generateBalas();
+      player.moveRight();
+      break;
+    default:
+      break;
+  }
+});

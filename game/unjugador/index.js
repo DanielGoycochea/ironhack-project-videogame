@@ -4,6 +4,7 @@ window.onload = function () {
     
     generateVampiros()
     generateLobos()
+    generateMomia()
     ctx.clearRect(0,0, canvas.width, canvas.height)
     
     board.draw()
@@ -18,9 +19,7 @@ window.onload = function () {
     checkColition()
     drawScore()
     drawlive()
-    gameOver()
-   
-   
+    gameOver() 
   }
 
   function startGame(){
