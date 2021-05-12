@@ -102,28 +102,20 @@ function Lobos( y, type){
   }
 
 }
-
-function Momia( y, type){
+function Momia( y ){
   this.x = canvas.width
   this.y = y
-  this.width = 80
-  this.height = 80
+  this.width = 130
+  this.height = 130
   this.img = new Image()
-  this.img.src = '../../Images/santo_izq.png'
-  
+  this.img.src = '../../Images/momia.png'
+  this.anima = true  
   this.draw = function(){
-     this.x--;
-    if(type){
-      
-      ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
-         
-    }
-    
+    this.anima = !this.anima;
+    this.x--;
+    ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
   }
-
 }
-
-
 
 function Bala(){
   this.x = player.x + 50;
